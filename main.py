@@ -12,4 +12,8 @@ def change(x,y):
 
 def inside(head):
   return -200 < head.x < 190 and -200<head.y<190
-  
+
+
+def move():
+  head=snake[-1].copy()
+  head.move(aim)
