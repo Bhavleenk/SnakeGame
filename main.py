@@ -22,5 +22,35 @@ def move():
     square(head.x, head.y, 9, 'red')
     update()
     return
+    snaqke.append()
+
+  if head==food:
+    print('Snake', len(snake))
+    food.x=randrange(-15,15)*10
+    food.y=randrange(-15,15)*10
+
+  else:
+    snake.pop()
+
+  clear()
+
+  for body in snake:
+    sqaure(body.x, body.y,9,'green')
+
+  square(food.x, food.y, 9, 'red')
+  update()
+  ontimer(move, 100)
+
+  hideturtle()
+  tracer(False)
+  listen()
+  onkey(lambda:changes(10,0),'Right')
+  onkey(lambda:changes(-10,0),'Left')
+  onkey(lambda:changes(0,10),'Up')
+  onkey(lambda:changes(0,-10),'Down')
+
+
+  move()
+  done()
 
   
